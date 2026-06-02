@@ -1,0 +1,334 @@
+/*
+Project: Hola Bon Website
+File: contacts.css
+*/
+
+/* ===== FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
+/* ===== CSS VARIABLES ===== */
+:root {
+    --pink:  #FF71D3;
+    --green: #8BAA83;
+    --mauve: #BF84AC;
+    --sage:  #88AA83;
+    --dark:  #806E7A;
+    --white: #ffffff;
+    --bg:    #ffffff;
+}
+
+
+/* ===== GENERAL RESET ===== */
+* {
+    font-family: 'Fragment Mono', monospace;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trade Gothic LT', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--dark);
+    padding-bottom: 50px;
+}
+
+
+/* ===== HEADER AND LOGO ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Trade Gothic LT', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+header {
+    position: fixed;
+    background: var(--dark);
+    border-bottom: 2px solid transparent;
+    transition: background 0.3s, border-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5%;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+}
+
+
+/* ===== HEADER LOCATION BUTTON ===== */
+.btn-locations {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Fragment Mono', monospace;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    color: var(--dark);
+    text-decoration: none;
+    border: 1.5px solid var(--mauve);
+    border-radius: 50px;
+    padding: 10px 28px;
+    transition: 0.3s;
+}
+
+.btn-locations:hover {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: var(--white);
+}
+
+
+/* ===== NAVIGATION ===== */
+nav {
+    display: block;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-family: 'Fragment Mono', monospace;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: 0.2s;
+    color: var(--dark);
+}
+
+nav a:hover {
+    color: var(--pink);
+    transition: 0.2s ease-in-out;
+}
+
+
+/* ===== PAGE STRUCTURE ===== */
+.page-section {
+    display: block;
+    padding-top: 0;
+}
+
+.hero-small {
+    background: var(--dark);
+    color: var(--white);
+    text-align: center;
+    padding: 120px 20px 60px;
+}
+
+.hero-small h1 {
+    font-family: 'Trade Gothic LT', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--pink);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* ===== CONTACT GRID ===== */
+.contact-grid-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.contact-card-page {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid var(--mauve);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.contact-card-page:hover {
+    border-color: var(--pink);
+}
+
+
+/* ===== CONTACT ICONS ===== */
+.contact-icons-row {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin: 15px 0 20px;
+}
+
+.phone-large {
+    font-family: 'Fragment Mono', monospace;
+    font-style: normal;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.phone-large:hover {
+    color: var(--pink);
+}
+
+
+/* ===== BUTTONS ===== */
+.btn-fill {
+    margin-top: 25px;
+    background: var(--pink);
+    color: var(--white);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-family: 'Fragment Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-fill:hover {
+    background: var(--green);
+    color: var(--dark);
+    transform: translateY(-3px);
+}
+
+
+/* ===== TEXT INSIDE CARDS ===== */
+.contact-card-page h3 {
+    font-family: 'Trade Gothic LT', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.contact-card-page p {
+    font-family: 'Fragment Mono', monospace;
+    font-style: normal;
+    color: var(--mauve);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* ===== ICONS ===== */
+i {
+    font-size: 2.2rem;
+    color: var(--pink);
+    margin-bottom: 16px;
+    transition: 0.2s;
+}
+
+.contact-icons-row a {
+    color: var(--pink);
+    transition: 0.2s;
+}
+
+.contact-icons-row a:hover i {
+    color: var(--green);
+}
+
+
+/* ===== ANIMATION ===== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+
+/* ===== HEADER SCROLL STATES ===== */
+header .logo {
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+header nav a {
+    color: var(--white);
+}
+
+header .btn-locations {
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+header.scrolled {
+    background: var(--white);
+    border-bottom: 2px solid var(--pink);
+}
+
+header.scrolled .logo {
+    color: var(--dark);
+}
+
+header.scrolled nav a {
+    color: var(--dark);
+}
+
+header.scrolled nav a:hover {
+    color: var(--pink);
+}
+
+header.scrolled .btn-locations {
+    color: var(--dark);
+    border-color: var(--mauve);
+}
+
+header.scrolled .btn-locations:hover {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: var(--white);
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 40px;
+    font-family: 'Fragment Mono', monospace;
+    font-style: normal;
+    color: var(--sage);
+    font-size: 0.85rem;
+    margin-top: auto;
+}
